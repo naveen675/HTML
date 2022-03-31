@@ -11,10 +11,7 @@ window.addEventListener("load", () => {
         let increment = () => {
             time++;
             display.value = time;
-        }
-
-        console.log("inside starter");
-       
+        }   
         let session = setInterval(increment, 1000);
         
         stoper.addEventListener("click", e => {
