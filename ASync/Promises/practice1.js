@@ -1,50 +1,50 @@
-// let promise1 = a => {
-//     return new Promise((resolve,reject)=> {
+let promise1 = a => {
+    return new Promise((resolve,reject)=> {
 
-//     if(! a){
-//         reject("Failed");
-//     }
-//     else{
-//         resolve("Success");
-//     }
+    if(! a){
+        reject("Failed");
+    }
+    else{
+        resolve("Success");
+    }
 
-// })
-// }
+})
+}
 
 
-// let success = result => {
-//     console.log(result);
-// }
-// let fail = error => {
-//     console.log(error);
-// }
+let success = result => {
+    console.log(result);
+}
+let fail = error => {
+    console.log(error);
+}
 
-// let promise2 = new Promise((resolve,reject)=> {
+let promise2 = new Promise((resolve,reject)=> {
 
-//     fetch("https://api.github.com/users/naveen675/repos").then(response => {
+    fetch("https://api.github.com/users/naveen675/repos").then(response => {
 
-//         if(! response.ok){
-//             reject(new Error(`Not able to fetch Data ${response.status}`));
-//         }
-//         else{
-//             resolve(response.json());
-//         }
-//     })
+        if(! response.ok){
+            reject(new Error(`Not able to fetch Data ${response.status}`));
+        }
+        else{
+            resolve(response.json());
+        }
+    })
     
-// })
+})
 
-// success = result => {
-//     console.log(result);
-// }
-// fail = error => {
-//     console.log(error);
-// }
+success = result => {
+    console.log(result);
+}
+fail = error => {
+    console.log(error);
+}
 
-// Promise.all([promise1(true),promise2]).then(results => {
-//     console.log(results);
-// });
+Promise.all([promise1(true),promise2]).then(results => {
+    console.log(results);
+});
 
-// console.log(promise1(false));
+console.log(promise1(false));
 
 
 let timeout = delay => {
